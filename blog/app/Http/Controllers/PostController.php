@@ -11,8 +11,18 @@ class PostController extends Controller
         return "<h1>Welcome to laravel</h1>";
     }
 
-    public function detail()
+    public function detail($id)
     {
-        return "<h1>Welcome to laravel detail</h1>";
+        return "<h1>Welcome to laravel detail $id</h1>";
+    }
+
+    public function oldUrl()
+    {
+        return redirect('/new-url');
+    }
+
+    public function newUrl()
+    {
+        return "<h1>Welcome to new url page</h1>";
     }
 }

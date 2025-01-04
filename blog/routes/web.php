@@ -10,4 +10,4 @@ Route::get('/test', function () {
 
 Route::get('/', [PostController::class, 'index']);
 
-Route::get('/post/detail', [PostController::class, 'detail']);
+Route::get('/post/{id}', [PostController::class, 'detail'])->where('id', '[0-9]+');
